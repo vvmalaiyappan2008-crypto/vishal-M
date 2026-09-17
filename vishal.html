@@ -1,0 +1,129 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Vishal M | ECE Portfolio</title> <style> *{ margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; } html{scroll-behavior:smooth} body{ background:#02050a; color:white; line-height:1.6; overflow-x:hidden; } /* ===== ANIMATED TECH BACKGROUND ===== */ body::before{ content:""; position:fixed; inset:0; z-index:-3; background: radial-gradient(circle at 50% 35%,rgba(0,180,255,.18),transparent 30%), linear-gradient(120deg,#01030a,#061827,#02050a); } body::after{ content:""; position:fixed; inset:0; z-index:-2; opacity:.18; background-image: linear-gradient(rgba(0,220,255,.25) 1px,transparent 1px), linear-gradient(90deg,rgba(0,220,255,.25) 1px,transparent 1px); background-size:45px 45px; animation:gridMove 10s linear infinite; } @keyframes gridMove{ from{background-position:0 0} to{background-position:45px 45px} } /* ===== NAVIGATION ===== */ nav{ position:fixed; top:0; width:100%; padding:18px 8%; background:rgba(0,5,12,.82); backdrop-filter:blur(12px); display:flex; justify-content:space-between; align-items:center; z-index:100; border-bottom:1px solid rgba(0,229,255,.25); } .logo{ font-size:25px; font-weight:bold; color:#00e5ff; text-shadow:0 0 15px #00e5ff; } nav a{ color:white; text-decoration:none; margin-left:25px; font-weight:bold; transition:.3s; } nav a:hover{ color:#00e5ff; text-shadow:0 0 10px #00e5ff; } /* ===== HERO ===== */ .hero{ min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; overflow:hidden; background: linear-gradient(to bottom,rgba(0,0,0,.25),#02050a), radial-gradient(circle at center,rgba(0,150,255,.2),transparent 50%); } /* Roman Reigns inspired silhouette / action glow */ .hero::before{ content:""; position:absolute; width:430px; height:650px; right:8%; bottom:-100px; background: radial-gradient(circle at 50% 17%,#172738 0 42px,transparent 43px), linear-gradient(90deg,transparent 0 32%,#111e2d 33% 67%,transparent 68%); opacity:.75; filter:drop-shadow(0 0 35px #0077ff); clip-path:polygon( 38% 0,62% 0,69% 12%,75% 18%,83% 35%, 100% 55%,82% 100%,18% 100%,0 55%,17% 35%, 25% 18%,31% 12% ); animation:warriorPulse 3s ease-in-out infinite; } @keyframes warriorPulse{ 0%,100%{ transform:scale(1); filter:drop-shadow(0 0 20px #0066ff); } 50%{ transform:scale(1.04); filter:drop-shadow(0 0 55px #00bfff); } } .hero-content{ position:relative; z-index:2; max-width:800px; animation:fadeIn 1.5s ease; } @keyframes fadeIn{ from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} } .hero h1{ font-size:70px; color:#00e5ff; text-shadow: 0 0 10px #00e5ff, 0 0 30px #0077ff, 0 0 60px #0055ff; letter-spacing:3px; } .hero h2{ font-size:27px; margin:10px 0; text-transform:uppercase; letter-spacing:2px; } .hero p{ max-width:650px; margin:20px auto; color:#c9d6e5; font-size:18px; } /* ===== BUTTONS ===== */ .btn{ display:inline-block; padding:13px 30px; margin:10px; background:linear-gradient(90deg,#00c6ff,#0072ff); color:white; text-decoration:none; border-radius:5px; font-weight:bold; border:1px solid #00e5ff; box-shadow:0 0 15px rgba(0,190,255,.5); transition:.3s; } .btn:hover{ transform:translateY(-4px) scale(1.03); box-shadow: 0 0 15px #00e5ff, 0 0 35px #0077ff; } /* ===== SECTIONS ===== */ section{ padding:100px 8%; position:relative; } .title{ text-align:center; font-size:40px; color:#00e5ff; margin-bottom:45px; text-shadow:0 0 20px #0077ff; text-transform:uppercase; letter-spacing:2px; } .about{ max-width:850px; margin:auto; text-align:center; font-size:19px; color:#d5deea; background:rgba(8,25,42,.6); padding:35px; border-left:3px solid #00e5ff; border-right:3px solid #0077ff; box-shadow:0 0 25px rgba(0,150,255,.12); } /* ===== CARDS ===== */ .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; max-width:1050px; margin:auto; } .card{ background: linear-gradient(145deg,rgba(14,38,61,.95),rgba(3,12,22,.95)); padding:30px; border-radius:10px; text-align:center; border:1px solid #164c70; transition:.35s; box-shadow:inset 0 0 20px rgba(0,160,255,.04); } .card:hover{ transform:translateY(-10px); border-color:#00e5ff; box-shadow: 0 0 15px rgba(0,229,255,.4), inset 0 0 25px rgba(0,100,255,.1); } .card h3{ color:#00e5ff; margin-bottom:12px; font-size:22px; } /* ===== SKILLS ===== */ .skills{ text-align:center; max-width:900px; margin:auto; } .skills span{ display:inline-block; background:#071a2a; padding:13px 22px; margin:8px; border-radius:4px; border:1px solid #00a9d9; color:white; box-shadow:0 0 8px rgba(0,180,255,.15); transition:.3s; } .skills span:hover{ background:#00a9d9; color:#00101a; box-shadow:0 0 20px #00e5ff; transform:translateY(-4px); } /* ===== CONTACT ===== */ .contact{ text-align:center; } .contact p{ margin:12px; color:#c9d6e5; font-size:17px; } /* ===== FOOTER ===== */ footer{ text-align:center; padding:25px; background:#01040a; color:#7890a5; border-top:1px solid #123b55; } /* ===== MOBILE ===== */ @media(max-width:700px){ nav{ padding:15px 4%; } nav a{ margin-left:8px; font-size:11px; } .hero h1{ font-size:45px; } .hero h2{ font-size:19px; } .hero::before{ opacity:.25; right:50%; transform:translateX(50%); } section{ padding:80px 6%; } .title{ font-size:30px; } } </style> </head> <body> <!-- ===== NAVBAR ===== --> <nav> <div class="logo">VISHAL.M</div>
+<div>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
+</div>
+
+</nav> <!-- ===== HERO ===== --> <section class="hero" id="home">
+<div class="hero-content">
+
+    <h1>VISHAL M</h1>
+
+    <h2>ECE • TECHNOLOGY • INNOVATION</h2>
+
+    <p>
+        Electronics & Communication Engineering student
+        passionate about technology, coding, electronics
+        and building innovative solutions.
+    </p>
+
+    <a class="btn" href="#about">ENTER MY WORLD</a>
+    <a class="btn" href="#projects">VIEW PROJECTS</a>
+
+</div>
+
+</section> <!-- ===== ABOUT ===== --> <section id="about">
+<h2 class="title">About Me</h2>
+
+<p class="about">
+
+    I am <b>Vishal M</b>, an Electronics and Communication
+    Engineering student at <b>Mount Zion Engineering College</b>.
+
+    I am passionate about electronics, programming,
+    communication technology and innovation.
+
+    I enjoy learning new technologies and transforming
+    creative ideas into practical projects.
+
+</p>
+
+</section> <!-- ===== SKILLS ===== --> <section id="skills">
+<h2 class="title">Technical Skills</h2>
+
+<div class="skills">
+
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>C Programming</span>
+    <span>Electronics</span>
+    <span>Digital Electronics</span>
+    <span>Embedded Systems</span>
+    <span>Communication Systems</span>
+
+</div>
+
+</section> <!-- ===== PROJECTS ===== --> <section id="projects">
+<h2 class="title">My Projects</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>⚡ Smart Electronics</h3>
+        <p>
+            A concept project focused on creating
+            useful smart solutions using electronics.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>💻 Web Portfolio</h3>
+        <p>
+            A modern responsive portfolio website
+            developed using HTML, CSS and JavaScript.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🚀 Future Innovation</h3>
+        <p>
+            Exploring new ideas combining ECE,
+            embedded technology and software.
+        </p>
+    </div>
+
+</div>
+
+</section> <!-- ===== EDUCATION ===== --> <section>
+<h2 class="title">Education</h2>
+
+<div class="cards">
+
+    <div class="card">
+
+        <h3>🎓 B.E. Electronics & Communication Engineering</h3>
+
+        <p>
+            <b>Mount Zion Engineering College</b>
+        </p>
+
+        <p>
+            Passionate about electronics,
+            communication and emerging technology.
+        </p>
+
+    </div>
+
+</div>
+
+</section> <!-- ===== CONTACT ===== --> <section id="contact" class="contact">
+<h2 class="title">Contact Me</h2>
+
+<p>📧 Email: your-email@example.com</p>
+
+<p>📱 Phone: +91 XXXXX XXXXX</p>
+
+<p>🎓 Department: Electronics & Communication Engineering</p>
+
+<p>🏫 Mount Zion Engineering College</p>
+
+<a class="btn" href="#home">BACK TO TOP</a>
+
+</section> <!-- ===== FOOTER ===== --> <footer>
+© 2026 Vishal M | ECE Portfolio | Mount Zion Engineering College
+
+</footer> </body> </html>
